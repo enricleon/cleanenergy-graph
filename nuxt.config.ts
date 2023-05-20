@@ -5,7 +5,13 @@ export default defineNuxtConfig({
   dir: {
     layouts: 'modules/core/layouts',
     pages: 'modules/core/pages',
-    middleware: 'modules/core/middleware',
+    middleware: 'modules/core/middleware'
+  },
+  imports: {
+    dirs: ['modules/core/composables']
+  },
+  components: {
+    dirs: ['modules/core/components']
   },
   modules: [
     '@pinia/nuxt',
@@ -14,9 +20,12 @@ export default defineNuxtConfig({
       {
         modules: ['energy', 'shared'],
         config: {
-          srcDir: 'src',
-        },
-      },
-    ],
+          srcDir: 'src'
+        }
+      }
+    ]
   ],
-})
+  build: {
+    transpile: ['nuxt/app']
+  }
+});

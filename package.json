@@ -8,17 +8,25 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@types/node": "^18",
-    "glob": "^10.2.5",
-    "nuxt": "^3.5.0"
-  },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.3"
+  },
+  "devDependencies": {
     "@nuxt/kit": "^3.5.0",
     "@nuxt/utils": "^2.16.3",
-    "@pinia/nuxt": "^0.4.11",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/node": "^18",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "fs": "^0.0.1-security",
+    "nuxt": "^3.5.0",
     "path": "^0.12.7",
-    "require-context": "^1.1.0"
+    "prettier": "^2.8.8",
+    "require-context": "^1.1.0",
+    "typescript": "^5.0.4",
+    "vue-facing-decorator": "^3.0.0-beta.3"
   }
 }
