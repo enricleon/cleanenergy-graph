@@ -17,5 +17,9 @@ export default class CleanEnergyPage extends Vue {
   get dummy() {
     return this.store.dummy;
   }
+
+  created() {
+    this.store.testInjection();
+  }
 }
 </script>

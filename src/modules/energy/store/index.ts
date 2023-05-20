@@ -12,6 +12,10 @@ export const useEnergyStore = defineStore({
   actions: {
     addDummyValue(value: string) {
       this.dummy = value;
+    },
+    testInjection() {
+      const $apiService = useNuxtApp().$apiService;
+      console.log($apiService);
     }
   }
 });

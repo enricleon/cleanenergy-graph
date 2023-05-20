@@ -25,6 +25,7 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  // plugins: [{ src: '~/plugins/hello.ts' }],
   build: {
     transpile: ['nuxt/app']
   }
