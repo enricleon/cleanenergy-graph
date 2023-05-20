@@ -10,6 +10,15 @@
   },
   "devDependencies": {
     "@types/node": "^18",
+    "glob": "^10.2.5",
     "nuxt": "^3.5.0"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.5.0",
+    "@nuxt/utils": "^2.16.3",
+    "@pinia/nuxt": "^0.4.11",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "require-context": "^1.1.0"
   }
 }
