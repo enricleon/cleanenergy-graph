@@ -15,14 +15,15 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     apiConfig: {
-      key: 'Api Config Key',
+      key: 'Api Config Key'
+      // Api de datos de la red eléctrica abierta de españa: https://www.ree.es/en/apidatos
+    },
+    // Keys within public are also exposed client-side
+    public: {
       baseUrl: 'https://apidatos.ree.es/es/datos/'
     }
-    // Keys within public are also exposed client-side
-    // public: {
-    //   shoeStoreApiBase: '/shoe-api'
-    // }
   },
+  css: ['@/assets/css/main.css'],
   modules: [
     '@pinia/nuxt',
     [

@@ -1,6 +1,5 @@
 <template>
   <section class="content-wrapper">
-    Energy Module Index
     <nuxt-layout></nuxt-layout>
   </section>
 </template>

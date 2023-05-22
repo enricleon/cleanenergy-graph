@@ -1,19 +1,17 @@
 import { $Fetch, FetchOptions } from 'ohmyfetch';
 import ApiConfig from '@/modules/shared/services/api.config';
-import EnergyService from '@/modules/shared/services/energy.service';
+import EnergyService from '@/modules/energy/services/energy.service';
 
-// plugins/hello.ts
 export default defineNuxtPlugin(() => {
-  const apiConfig = useRuntimeConfig().apiConfig;
+  const { baseUrl } = useRuntimeConfig().public;
 
   const fetchOptions: FetchOptions = {
-    baseURL: apiConfig.baseUrl
+    baseURL: baseUrl as string
   };
 
   /** create a new instance of $fetcher with custom option */
   const apiFetcher = $fetch.create(fetchOptions) as $Fetch;
 
-  console.log('initializing api');
   return {
     provide: {
       api: {
