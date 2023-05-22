@@ -6,16 +6,22 @@ export const useEnergyStore = defineStore({
   id: 'energy-store',
   state: (): EnergyState => {
     return {
-      dummy: 'dummy'
+      dummy: 'dummy',
+      generationSource: undefined
     };
   },
   actions: {
     addDummyValue(value: string) {
       this.dummy = value;
     },
-    testInjection() {
-      const $apiService = useNuxtApp().$apiService;
-      console.log($apiService);
+    async fetchGenerationSource() {
+      const { $api } = useNuxtApp();
+
+      const generationSource = await $api.energy.getGenerationSource();
+      console.log(generationSource);
+
+      this.generationSource = generationSource;
+      // console.log($apiService.getDummyData());
     }
   }
 });

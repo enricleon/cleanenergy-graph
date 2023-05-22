@@ -1,7 +1,14 @@
+import { $Fetch } from 'ohmyfetch';
+
 export default class ApiService {
-  // constructor({ apiKey, baseId }: { apiKey: string; baseId: string }) {
-  // }
-  // async getData<T>(table: string): Promise<T[]> {
-  //   return (await this.api(table).select().all()) as T[];
-  // }
+  private $fetch: $Fetch;
+
+  constructor(fetcher: $Fetch) {
+    this.$fetch = fetcher;
+  }
+
+  async call<T>(method: string, url: string, data?: object, extras = {}): Promise<T> {
+    const $res: T = await this.$fetch(url, { method, body: data, ...extras });
+    return $res;
+  }
 }

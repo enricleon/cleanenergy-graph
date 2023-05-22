@@ -13,6 +13,16 @@ export default defineNuxtConfig({
   components: {
     dirs: ['modules/core/components']
   },
+  runtimeConfig: {
+    apiConfig: {
+      key: 'Api Config Key',
+      baseUrl: 'https://apidatos.ree.es/es/datos/'
+    }
+    // Keys within public are also exposed client-side
+    // public: {
+    //   shoeStoreApiBase: '/shoe-api'
+    // }
+  },
   modules: [
     '@pinia/nuxt',
     [

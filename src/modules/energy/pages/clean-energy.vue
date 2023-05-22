@@ -1,6 +1,7 @@
 <template>
   <section class="content-wrapper">
-    <ce-dummy :value="dummy"></ce-dummy>
+    {{ generationSource }}
+    <!-- <ce-dummy :value="dummy"></ce-dummy> -->
   </section>
 </template>
 <script lang="ts">
@@ -14,12 +15,12 @@ export default class CleanEnergyPage extends Vue {
 
   pageMeta!: any;
 
-  get dummy() {
-    return this.store.dummy;
+  get generationSource() {
+    return this.store.generationSource;
   }
 
-  created() {
-    this.store.testInjection();
+  async serverPrefetch() {
+    await this.store.fetchGenerationSource();
   }
 }
 </script>
